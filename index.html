@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lumor - Подписки Spotify Premium</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <span class="logo-text">Lumor</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home">Главная</a></li>
+                    <li><a href="#plans">Подписки</a></li>
+                    <li><a href="#features">Преимущества</a></li>
+                    <li><a href="#contact">Контакты</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <h1>Откройте мир музыки с Spotify Premium</h1>
+                    <p>Слушайте любимую музыку без рекламы, в высоком качестве и с возможностью скачивания</p>
+                    <div class="hero-bonus">
+                        <span class="bonus-badge">🎁 Бонус!</span>
+                        <p>При покупке любой подписки <strong>аккаунт Spotify идёт в подарок!</strong></p>
+                    </div>
+                    <a href="#plans" class="cta-button">Выбрать подписку</a>
+                </div>
+                <div class="hero-image">
+                    <div class="music-visualizer">
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="features">
+            <div class="container">
+                <h2>Почему Spotify Premium?</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <i class="fas fa-music"></i>
+                        <h3>Без рекламы</h3>
+                        <p>Наслаждайтесь музыкой без перерывов на рекламу</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-download"></i>
+                        <h3>Скачивание</h3>
+                        <p>Скачивайте треки для прослушивания офлайн</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-headphones"></i>
+                        <h3>Высокое качество</h3>
+                        <p>Звук в качестве до 320 кбит/с</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-random"></i>
+                        <h3>Неограниченные переходы</h3>
+                        <p>Переключайтесь между треками без ограничений</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="plans" class="plans">
+            <div class="container">
+                <h2>Выберите свою подписку</h2>
+                <div class="account-info">
+                    <div class="account-bonus">
+                        <i class="fas fa-gift"></i>
+                        <div>
+                            <h3>🎁 Аккаунт в подарок!</h3>
+                            <p>При покупке любой подписки вы получаете готовый аккаунт Spotify Premium абсолютно бесплатно!</p>
+                        </div>
+                    </div>
+                    <div class="account-only">
+                        <i class="fas fa-user-plus"></i>
+                        <div>
+                            <h3>💳 Только аккаунт</h3>
+                            <p>Нужен только аккаунт? Купите готовый аккаунт Spotify Premium за <strong>100₽</strong></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="plans-grid">
+                    <!-- Индивидуальная подписка -->
+                    <div class="plan-card featured">
+                        <div class="plan-badge">Популярно</div>
+                        <div class="plan-header">
+                            <h3>Индивидуальная</h3>
+                            <div class="plan-icon">
+                                <i class="fas fa-user"></i>
+                            </div>
+                        </div>
+                        <div class="plan-description">
+                            <p>Идеально для одного пользователя. Полный доступ к Spotify Premium с возможностью скачивания музыки и прослушивания без рекламы.</p>
+                        </div>
+                        <div class="plan-prices">
+                            <div class="price-option" data-plan="individual" data-period="1" data-price="300">
+                                <span class="period">1 месяц</span>
+                                <span class="price">300₽</span>
+                            </div>
+                            <div class="price-option" data-plan="individual" data-period="3" data-price="600">
+                                <span class="period">3 месяца</span>
+                                <span class="price">600₽</span>
+                            </div>
+                            <div class="price-option" data-plan="individual" data-period="6" data-price="1500">
+                                <span class="period">6 месяцев</span>
+                                <span class="price">1500₽</span>
+                            </div>
+                            <div class="price-option" data-plan="individual" data-period="12" data-price="3000">
+                                <span class="period">12 месяцев</span>
+                                <span class="price">3000₽</span>
+                            </div>
+                        </div>
+                        <button class="buy-button" data-plan="individual">Купить</button>
+                    </div>
+
+                    <!-- Дуо подписка -->
+                    <div class="plan-card">
+                        <div class="plan-header">
+                            <h3>Дуо</h3>
+                            <div class="plan-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                        </div>
+                        <div class="plan-description">
+                            <p>Для двух человек, живущих по одному адресу. Два отдельных аккаунта Premium с общим доступом к семейным плейлистам.</p>
+                        </div>
+                        <div class="plan-prices">
+                            <div class="price-option" data-plan="duo" data-period="1" data-price="450">
+                                <span class="period">1 месяц</span>
+                                <span class="price">450₽</span>
+                            </div>
+                            <div class="price-option" data-plan="duo" data-period="3" data-price="750">
+                                <span class="period">3 месяца</span>
+                                <span class="price">750₽</span>
+                            </div>
+                            <div class="price-option" data-plan="duo" data-period="6" data-price="2000">
+                                <span class="period">6 месяцев</span>
+                                <span class="price">2000₽</span>
+                            </div>
+                            <div class="price-option" data-plan="duo" data-period="12" data-price="4500">
+                                <span class="period">12 месяцев</span>
+                                <span class="price">4500₽</span>
+                            </div>
+                        </div>
+                        <button class="buy-button" data-plan="duo">Купить</button>
+                    </div>
+
+                    <!-- Семейная подписка -->
+                    <div class="plan-card">
+                        <div class="plan-header">
+                            <h3>Семейная</h3>
+                            <div class="plan-icon">
+                                <i class="fas fa-home"></i>
+                            </div>
+                        </div>
+                        <div class="plan-description">
+                            <p>Для семьи до 6 человек. Каждый получает отдельный аккаунт Premium с родительским контролем и семейными плейлистами.</p>
+                        </div>
+                        <div class="plan-prices">
+                            <div class="price-option" data-plan="family" data-period="1" data-price="600">
+                                <span class="period">1 месяц</span>
+                                <span class="price">600₽</span>
+                            </div>
+                            <div class="price-option" data-plan="family" data-period="3" data-price="900">
+                                <span class="period">3 месяца</span>
+                                <span class="price">900₽</span>
+                            </div>
+                            <div class="price-option" data-plan="family" data-period="6" data-price="2500">
+                                <span class="period">6 месяцев</span>
+                                <span class="price">2500₽</span>
+                            </div>
+                            <div class="price-option" data-plan="family" data-period="12" data-price="5000">
+                                <span class="period">12 месяцев</span>
+                                <span class="price">5000₽</span>
+                            </div>
+                        </div>
+                        <button class="buy-button" data-plan="family">Купить</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Секция покупки только аккаунта -->
+        <section id="account-only" class="account-only-section">
+            <div class="container">
+                <div class="account-only-card">
+                    <div class="account-only-header">
+                        <i class="fas fa-user-circle"></i>
+                        <h3>Только аккаунт Spotify Premium</h3>
+                    </div>
+                    <div class="account-only-content">
+                        <p>Нужен только готовый аккаунт без подписки?</p>
+                        <div class="account-price">
+                            <span class="price">100₽</span>
+                            <span class="price-label">за аккаунт</span>
+                        </div>
+                        <ul class="account-features">
+                            <li>✅ Готовый аккаунт Spotify</li>
+                            <li>✅ Мгновенная доставка</li>
+                            <li>✅ Гарантия работы</li>
+                            <li>✅ Поддержка 24/7</li>
+                        </ul>
+                        <button class="account-only-button" onclick="buyAccountOnly()">
+                            <i class="fas fa-shopping-cart"></i>
+                            Купить аккаунт за 100₽
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2>Свяжитесь с нами</h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>kodspotify22@gmail.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>8-800-555-0123</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <span>24/7 Поддержка</span>
+                        </div>
+                        <div class="contact-social">
+                            <h4>Мы в социальных сетях:</h4>
+                            <div class="contact-social-links">
+                                <a href="https://www.instagram.com/lumor_.store/" target="_blank" class="contact-social-icon" title="Instagram">
+                                    <i class="fab fa-instagram"></i>
+                                    <span>Instagram</span>
+                                </a>
+                                <a href="https://t.me/LumorStore_Bot" target="_blank" class="contact-social-icon" title="Telegram Bot">
+                                    <i class="fab fa-telegram"></i>
+                                    <span>Telegram Bot</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <form class="contact-form" action="https://formspree.io/f/xpwgqkqk" method="POST" id="contactForm">
+                        <input type="text" name="name" placeholder="Ваше имя" required>
+                        <input type="email" name="email" placeholder="Email" required>
+                        <textarea name="message" placeholder="Ваше сообщение" rows="5" required></textarea>
+                        <button type="submit" class="submit-button">Отправить сообщение</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Lumor</h4>
+                    <p>Лучшие подписки на музыку по выгодным ценам</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Подписки</h4>
+                    <ul>
+                        <li><a href="#plans">Индивидуальная</a></li>
+                        <li><a href="#plans">Дуо</a></li>
+                        <li><a href="#plans">Семейная</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Поддержка</h4>
+                    <ul>
+                        <li><a href="#contact">Контакты</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Помощь</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="social-links">
+                    <a href="https://www.instagram.com/lumor_.store/" target="_blank" class="social-icon" title="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://t.me/LumorStore_Bot" target="_blank" class="social-icon" title="Telegram Bot">
+                        <i class="fab fa-telegram"></i>
+                    </a>
+                </div>
+                <p>&copy; 2024 Lumor. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Модальное окно для покупки -->
+    <div id="purchaseModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Оформление подписки</h2>
+            <div id="modalContent">
+                <!-- Содержимое будет добавлено через JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
