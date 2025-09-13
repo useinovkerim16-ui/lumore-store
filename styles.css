@@ -832,19 +832,21 @@ body {
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(5px);
+    background-color: rgba(0, 0, 0, 0.6);
+    align-items: center;
+    justify-content: center;
 }
 
 .modal-content {
-    background-color: white;
-    margin: 5% auto;
+    background: white;
+    margin: 0 auto;
     padding: 2rem;
-    border-radius: 20px;
+    border-radius: 15px;
     width: 90%;
-    max-width: 500px;
+    max-width: 400px;
     position: relative;
     animation: modalSlideIn 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
 @keyframes modalSlideIn {
@@ -934,5 +936,466 @@ body {
         margin: 10% auto;
         width: 95%;
         padding: 1.5rem;
+    }
+}
+
+/* Стили для секции отзывов */
+.reviews {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #f8fff9 0%, #e8f5e8 100%);
+}
+
+.reviews h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #1DB954;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.reviews-subtitle {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 3rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Форма добавления отзыва */
+.add-review-section {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    margin-bottom: 3rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.add-review-section h3 {
+    color: #1DB954;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.review-form-row {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    align-items: center;
+}
+
+.review-form-row input[type="text"] {
+    flex: 1;
+    padding: 12px 16px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.review-form-row input[type="text"]:focus {
+    outline: none;
+    border-color: #1DB954;
+}
+
+.rating-input {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.rating-input label {
+    font-weight: 600;
+    color: #333;
+}
+
+.stars {
+    display: flex;
+    gap: 2px;
+}
+
+.stars input[type="radio"] {
+    display: none;
+}
+
+.stars label {
+    font-size: 1.5rem;
+    color: #ddd;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.stars label:hover,
+.stars label:hover ~ label,
+.stars input[type="radio"]:checked ~ label {
+    color: #ffd700;
+}
+
+.stars input[type="radio"]:checked + label {
+    color: #ffd700;
+}
+
+#reviewText {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: inherit;
+    resize: vertical;
+    min-height: 100px;
+    margin-bottom: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+#reviewText:focus {
+    outline: none;
+    border-color: #1DB954;
+}
+
+.submit-review-btn {
+    background: linear-gradient(135deg, #1DB954 0%, #1ed760 100%);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: block;
+    margin: 0 auto;
+}
+
+.submit-review-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(29, 185, 84, 0.4);
+}
+
+/* Сетка отзывов */
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.review-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-left: 4px solid #1DB954;
+}
+
+.review-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.review-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.review-author {
+    font-weight: 600;
+    color: #333;
+    font-size: 1.1rem;
+}
+
+.review-rating {
+    display: flex;
+    gap: 2px;
+}
+
+.review-rating .star {
+    color: #ffd700;
+    font-size: 1.2rem;
+}
+
+.review-text {
+    color: #666;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+.review-date {
+    color: #999;
+    font-size: 0.9rem;
+    margin-top: 1rem;
+    text-align: right;
+}
+
+/* Адаптивность для отзывов */
+@media (max-width: 768px) {
+    .reviews {
+        padding: 60px 0;
+    }
+    
+    .reviews h2 {
+        font-size: 2rem;
+    }
+    
+    .add-review-section {
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+    }
+    
+    .review-form-row {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .rating-input {
+        justify-content: center;
+    }
+    
+    .reviews-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .review-card {
+        padding: 1.2rem;
+    }
+}
+
+/* Стили для формы заказа */
+.purchase-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #e9ecef;
+}
+
+
+.purchase-header h3 {
+    margin: 0;
+    color: #333;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.close-modal {
+    background: #f8f9fa;
+    border: 1px solid #dee2e6;
+    color: #6c757d;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.2s ease;
+}
+
+.close-modal:hover {
+    background: #e9ecef;
+    color: #495057;
+}
+
+
+.purchase-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.purchase-form input {
+    padding: 0.75rem 1rem;
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+    background: white;
+    color: #495057;
+}
+
+.purchase-form input:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.purchase-form input::placeholder {
+    color: #6c757d;
+}
+
+.messenger-selection {
+    margin: 1.5rem 0;
+    text-align: center;
+}
+
+.messenger-options {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.messenger-option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background: white;
+    min-width: 100px;
+}
+
+.messenger-option:hover {
+    border-color: #007bff;
+    background: #f8f9fa;
+}
+
+.messenger-option input[type="radio"] {
+    display: none;
+}
+
+.messenger-option:has(input[type="radio"]:checked) {
+    border-color: #007bff;
+    background: #e3f2fd;
+}
+
+.messenger-icon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.messenger-option span:last-child {
+    font-size: 0.9rem;
+    color: #495057;
+    font-weight: 500;
+}
+
+.confirm-button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-top: 1rem;
+}
+
+.confirm-button:hover {
+    background: #0056b3;
+}
+
+.confirm-button:active {
+    background: #004085;
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+    .purchase-header {
+        padding: 1.5rem 0 1rem 0;
+        margin-bottom: 1.5rem;
+    }
+    
+    .purchase-header h3 {
+        font-size: 1.5rem;
+    }
+    
+    .close-modal {
+        width: 32px;
+        height: 32px;
+        font-size: 1.2rem;
+    }
+    
+    
+    .purchase-form {
+        gap: 1.2rem;
+    }
+    
+    .purchase-form input {
+        padding: 1rem 1.2rem;
+        font-size: 1rem;
+        border-radius: 12px;
+    }
+    
+    .messenger-selection {
+        margin: 1.5rem 0;
+    }
+    
+    .messenger-selection label {
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+    }
+    
+    .messenger-options {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .messenger-option {
+        min-width: auto;
+        flex-direction: row;
+        justify-content: flex-start;
+        padding: 1rem 1.5rem;
+        border-radius: 15px;
+    }
+    
+    .messenger-icon {
+        font-size: 2rem;
+        margin-right: 1rem;
+        margin-bottom: 0;
+    }
+    
+    .messenger-option span:last-child {
+        font-size: 0.95rem;
+    }
+    
+    .confirm-button {
+        padding: 1.2rem 2rem;
+        font-size: 1.1rem;
+        border-radius: 20px;
+        margin-top: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .purchase-header h3 {
+        font-size: 1.3rem;
+    }
+    
+    
+    .purchase-form input {
+        padding: 0.8rem 1rem;
+        font-size: 0.95rem;
+    }
+    
+    .messenger-option {
+        padding: 0.8rem 1rem;
+    }
+    
+    .messenger-icon {
+        font-size: 1.8rem;
+        margin-right: 0.8rem;
+    }
+    
+    .confirm-button {
+        padding: 1rem 1.5rem;
+        font-size: 1rem;
     }
 }
