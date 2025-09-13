@@ -276,7 +276,7 @@ function handlePurchaseSubmit(e) {
     console.log('Сообщение для отправки:', message);
     
     if (messenger === 'telegram') {
-        const telegramUrl = `https://t.me/VashBrat0?text=${encodeURIComponent(message)}`;
+        const telegramUrl = `https://t.me/VashBrat0?start=${encodeURIComponent(message)}`;
         console.log('Открываем Telegram:', telegramUrl);
         const newWindow = window.open(telegramUrl, '_blank');
         if (newWindow) {
@@ -372,7 +372,7 @@ function buyAccountOnly() {
         console.log('Сообщение для отправки (account_only):', message);
         
         if (messenger === 'telegram') {
-            const telegramUrl = `https://t.me/VashBrat0?text=${encodeURIComponent(message)}`;
+            const telegramUrl = `https://t.me/VashBrat0?start=${encodeURIComponent(message)}`;
             console.log('Открываем Telegram (account_only):', telegramUrl);
             const newWindow = window.open(telegramUrl, '_blank');
             if (newWindow) {
