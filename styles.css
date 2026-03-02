@@ -924,8 +924,37 @@ body {
 }
 
 @media (max-width: 480px) {
+    .plan-badge {
+        padding-bottom: 8px;
+        margin-top: -10px;
+        margin-right: -10px;
+    }
+    .hero-bonus {
+        margin-top: 50px;
+
+    }
+    
+    .hero-image { 
+        padding-bottom: 110px;
+        padding-top: 5px;
+    }
+    
     .hero-content h1 {
         font-size: 2rem;
+        margin-top: 70px;
+        margin-bottom: 38px;
+        line-height: 1.3;
+
+
+    }
+    .spotify-premium {
+        font-size: 2.5rem;
+        /*color: #fff200;*/
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+        font-weight: 1000;
+        background: linear-gradient(90deg, #d29d00, #ffcc33, #ffd500, #ffcc33, #d29d00);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
     
     .features-grid {
@@ -1143,6 +1172,7 @@ body {
     
     .reviews h2 {
         font-size: 2rem;
+        
     }
     
     .add-review-section {
